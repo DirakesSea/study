@@ -1,0 +1,74 @@
+FUNCTION main:
+	DEC arr #40
+	num = CALL read
+	t3 = #10
+	IF num > t3 GOTO label0
+	GOTO label1
+  LABEL label0:
+	t5 = #10
+	num = t5
+  LABEL label1:
+	t7 = #0
+	i = t7
+  LABEL label2:
+	IF i < num GOTO label3
+	GOTO label4
+  LABEL label3:
+	t12 = #4
+	t11 = t12 * i
+	t14 = arr + t11
+	t59 = CALL read
+	*t14 = t59
+	t18 = #1
+	t15 = i + t18
+	i = t15
+	GOTO label2
+  LABEL label4:
+	key = CALL read
+	t21 = #0
+	left = t21
+	t25 = #1
+	t22 = num - t25
+	right = t22
+  LABEL label5:
+	IF left < right GOTO label6
+	GOTO label7
+  LABEL label6:
+	t29 = left + right
+	t33 = #2
+	t28 = t29 / t33
+	i = t28
+	t38 = #4
+	t37 = t38 * i
+	t39 = arr + t37
+	t34 = *t39
+	IF t34 == key GOTO label8
+	GOTO label9
+  LABEL label8:
+	ARG i
+	CALL write
+	t42 = #0
+	RETURN t42
+	GOTO label10
+  LABEL label9:
+	t47 = #4
+	t46 = t47 * i
+	t48 = arr + t46
+	t43 = *t48
+	IF t43 > key GOTO label11
+	GOTO label12
+  LABEL label11:
+	t52 = #1
+	t49 = i - t52
+	right = t49
+	GOTO label13
+  LABEL label12:
+	t56 = #1
+	t53 = i + t56
+	left = t53
+  LABEL label13:
+  LABEL label10:
+	GOTO label5
+  LABEL label7:
+	t58 = #0
+	RETURN t58

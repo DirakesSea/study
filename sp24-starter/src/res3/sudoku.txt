@@ -1,0 +1,634 @@
+GLOBAL a:
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+	.WORD #0
+FUNCTION check_sudoku:
+	PARAM a2a
+	DEC b #36
+	t1 = #0
+	i = t1
+  LABEL label0:
+	t4 = #9
+	IF i < t4 GOTO label1
+	GOTO label2
+  LABEL label1:
+	t6 = #0
+	j = t6
+  LABEL label3:
+	t9 = #9
+	IF j < t9 GOTO label4
+	GOTO label5
+  LABEL label4:
+	t12 = #4
+	t11 = t12 * j
+	t14 = #0
+	t15 = b + t11
+	*t15 = t14
+	t19 = #1
+	t16 = j + t19
+	j = t16
+	GOTO label3
+  LABEL label5:
+	t21 = #0
+	j = t21
+  LABEL label6:
+	t24 = #9
+	IF j < t24 GOTO label7
+	GOTO label8
+  LABEL label7:
+	t28 = #4
+	t29 = #9
+	t30 = i * t29
+	t32 = t30 + j
+	t27 = t28 * t32
+	t33 = a2a + t27
+	t25 = *t33
+	t34 = #0
+	IF t25 != t34 GOTO label9
+	GOTO label10
+  LABEL label9:
+	t40 = #4
+	t41 = #9
+	t42 = i * t41
+	t44 = t42 + j
+	t39 = t40 * t44
+	t45 = a2a + t39
+	t37 = *t45
+	t47 = #1
+	t36 = t37 - t47
+	t49 = #4
+	t48 = t49 * t36
+	t50 = b + t48
+	t35 = *t50
+	t51 = #0
+	IF t35 != t51 GOTO label12
+	GOTO label11
+  LABEL label11:
+	t56 = #4
+	t57 = #9
+	t58 = i * t57
+	t60 = t58 + j
+	t55 = t56 * t60
+	t61 = a2a + t55
+	t53 = *t61
+	t63 = #1
+	t52 = t53 - t63
+	t65 = #4
+	t64 = t65 * t52
+	t67 = #1
+	t68 = b + t64
+	*t68 = t67
+	GOTO label13
+  LABEL label12:
+	t70 = #0
+	RETURN t70
+  LABEL label13:
+  LABEL label10:
+	t74 = #1
+	t71 = j + t74
+	j = t71
+	GOTO label6
+  LABEL label8:
+	t78 = #1
+	t75 = i + t78
+	i = t75
+	GOTO label0
+  LABEL label2:
+	t80 = #0
+	i = t80
+  LABEL label14:
+	t83 = #9
+	IF i < t83 GOTO label15
+	GOTO label16
+  LABEL label15:
+	t85 = #0
+	j = t85
+  LABEL label17:
+	t88 = #9
+	IF j < t88 GOTO label18
+	GOTO label19
+  LABEL label18:
+	t91 = #4
+	t90 = t91 * j
+	t93 = #0
+	t94 = b + t90
+	*t94 = t93
+	t98 = #1
+	t95 = j + t98
+	j = t95
+	GOTO label17
+  LABEL label19:
+	t100 = #0
+	j = t100
+  LABEL label20:
+	t103 = #9
+	IF j < t103 GOTO label21
+	GOTO label22
+  LABEL label21:
+	t107 = #4
+	t108 = #9
+	t109 = j * t108
+	t111 = t109 + i
+	t106 = t107 * t111
+	t112 = a2a + t106
+	t104 = *t112
+	t113 = #0
+	IF t104 != t113 GOTO label23
+	GOTO label24
+  LABEL label23:
+	t119 = #4
+	t120 = #9
+	t121 = j * t120
+	t123 = t121 + i
+	t118 = t119 * t123
+	t124 = a2a + t118
+	t116 = *t124
+	t126 = #1
+	t115 = t116 - t126
+	t128 = #4
+	t127 = t128 * t115
+	t129 = b + t127
+	t114 = *t129
+	t130 = #0
+	IF t114 != t130 GOTO label26
+	GOTO label25
+  LABEL label25:
+	t135 = #4
+	t136 = #9
+	t137 = j * t136
+	t139 = t137 + i
+	t134 = t135 * t139
+	t140 = a2a + t134
+	t132 = *t140
+	t142 = #1
+	t131 = t132 - t142
+	t144 = #4
+	t143 = t144 * t131
+	t146 = #1
+	t147 = b + t143
+	*t147 = t146
+	GOTO label27
+  LABEL label26:
+	t149 = #0
+	RETURN t149
+  LABEL label27:
+  LABEL label24:
+	t153 = #1
+	t150 = j + t153
+	j = t150
+	GOTO label20
+  LABEL label22:
+	t157 = #1
+	t154 = i + t157
+	i = t154
+	GOTO label14
+  LABEL label16:
+	t159 = #0
+	i = t159
+  LABEL label28:
+	t162 = #3
+	IF i < t162 GOTO label29
+	GOTO label30
+  LABEL label29:
+	t164 = #0
+	j = t164
+  LABEL label31:
+	t167 = #3
+	IF j < t167 GOTO label32
+	GOTO label33
+  LABEL label32:
+	t169 = #0
+	k = t169
+  LABEL label34:
+	t172 = #9
+	IF k < t172 GOTO label35
+	GOTO label36
+  LABEL label35:
+	t175 = #4
+	t174 = t175 * k
+	t177 = #0
+	t178 = b + t174
+	*t178 = t177
+	t182 = #1
+	t179 = k + t182
+	k = t179
+	GOTO label34
+  LABEL label36:
+	t184 = #0
+	k = t184
+  LABEL label37:
+	t187 = #3
+	IF k < t187 GOTO label38
+	GOTO label39
+  LABEL label38:
+	t189 = #0
+	l1a = t189
+  LABEL label40:
+	t192 = #3
+	IF l1a < t192 GOTO label41
+	GOTO label42
+  LABEL label41:
+	t198 = #3
+	t195 = i * t198
+	t194 = t195 + k
+	t201 = #4
+	t202 = #9
+	t203 = t194 * t202
+	t208 = #3
+	t205 = j * t208
+	t204 = t205 + l1a
+	t210 = t203 + t204
+	t200 = t201 * t210
+	t211 = a2a + t200
+	t193 = *t211
+	m1a = t193
+	t213 = #0
+	IF m1a != t213 GOTO label43
+	GOTO label44
+  LABEL label43:
+	t218 = #1
+	t215 = m1a - t218
+	t220 = #4
+	t219 = t220 * t215
+	t221 = b + t219
+	t214 = *t221
+	t222 = #0
+	IF t214 != t222 GOTO label46
+	GOTO label45
+  LABEL label45:
+	t226 = #1
+	t223 = m1a - t226
+	t228 = #4
+	t227 = t228 * t223
+	t230 = #1
+	t231 = b + t227
+	*t231 = t230
+	GOTO label47
+  LABEL label46:
+	t233 = #0
+	RETURN t233
+  LABEL label47:
+  LABEL label44:
+	t237 = #1
+	t234 = l1a + t237
+	l1a = t234
+	GOTO label40
+  LABEL label42:
+	t241 = #1
+	t238 = k + t241
+	k = t238
+	GOTO label37
+  LABEL label39:
+	t245 = #1
+	t242 = j + t245
+	j = t242
+	GOTO label31
+  LABEL label33:
+	t249 = #1
+	t246 = i + t249
+	i = t246
+	GOTO label28
+  LABEL label30:
+	t251 = #1
+	RETURN t251
+FUNCTION solve_sudoku:
+	t253 = #1
+	done = t253
+	t255 = #0
+	i = t255
+  LABEL label48:
+	t258 = #9
+	IF i < t258 GOTO label51
+	GOTO label50
+  LABEL label51:
+	t260 = #0
+	IF done != t260 GOTO label49
+	GOTO label50
+  LABEL label49:
+	t262 = #0
+	j = t262
+  LABEL label52:
+	t265 = #9
+	IF j < t265 GOTO label55
+	GOTO label54
+  LABEL label55:
+	t267 = #0
+	IF done != t267 GOTO label53
+	GOTO label54
+  LABEL label53:
+	t270 = &a
+	t273 = #4
+	t274 = #9
+	t275 = i * t274
+	t277 = t275 + j
+	t272 = t273 * t277
+	t278 = t270 + t272
+	t268 = *t278
+	t279 = #0
+	IF t268 == t279 GOTO label56
+	GOTO label57
+  LABEL label56:
+	t281 = #0
+	done = t281
+	solve_i = i
+	solve_j = j
+  LABEL label57:
+	t287 = #1
+	t284 = j + t287
+	j = t284
+	GOTO label52
+  LABEL label54:
+	t291 = #1
+	t288 = i + t291
+	i = t288
+	GOTO label48
+  LABEL label50:
+	t293 = #0
+	IF done != t293 GOTO label58
+	GOTO label59
+  LABEL label58:
+	t297 = &a
+	ARG t297
+	t298 = CALL check_sudoku
+	RETURN t298
+  LABEL label59:
+	t300 = #1
+	i = t300
+  LABEL label60:
+	t303 = #9
+	IF i <= t303 GOTO label61
+	GOTO label62
+  LABEL label61:
+	t306 = #4
+	t308 = #9
+	t309 = solve_i * t308
+	t310 = t309 + solve_j
+	t305 = t306 * t310
+	t313 = &a
+	t312 = t313 + t305
+	*t312 = i
+	t317 = &a
+	ARG t317
+	t318 = CALL check_sudoku
+	t319 = #0
+	IF t318 != t319 GOTO label63
+	GOTO label64
+  LABEL label63:
+	t321 = CALL solve_sudoku
+	t322 = #0
+	IF t321 != t322 GOTO label65
+	GOTO label66
+  LABEL label65:
+	t324 = #1
+	RETURN t324
+  LABEL label66:
+  LABEL label64:
+	t328 = #1
+	t325 = i + t328
+	i = t325
+	GOTO label60
+  LABEL label62:
+	t331 = #4
+	t333 = #9
+	t334 = solve_i * t333
+	t335 = t334 + solve_j
+	t330 = t331 * t335
+	t337 = #0
+	t339 = &a
+	t338 = t339 + t330
+	*t338 = t337
+	t341 = #0
+	RETURN t341
+FUNCTION main:
+	t343 = #0
+	i = t343
+	t345 = #0
+	j = t345
+	t347 = #0
+	solve = t347
+  LABEL label67:
+	t350 = #9
+	IF i < t350 GOTO label68
+	GOTO label69
+  LABEL label68:
+	t352 = #0
+	j = t352
+  LABEL label70:
+	t355 = #9
+	IF j < t355 GOTO label71
+	GOTO label72
+  LABEL label71:
+	t358 = #4
+	t360 = #9
+	t361 = i * t360
+	t362 = t361 + j
+	t357 = t358 * t362
+	t365 = &a
+	t364 = t365 + t357
+	t463 = CALL read
+	*t364 = t463
+	t368 = &a
+	t371 = #4
+	t372 = #9
+	t373 = i * t372
+	t375 = t373 + j
+	t370 = t371 * t375
+	t376 = t368 + t370
+	t366 = *t376
+	t377 = #0
+	IF t366 < t377 GOTO label73
+	GOTO label75
+  LABEL label75:
+	t380 = &a
+	t383 = #4
+	t384 = #9
+	t385 = i * t384
+	t387 = t385 + j
+	t382 = t383 * t387
+	t388 = t380 + t382
+	t378 = *t388
+	t389 = #9
+	IF t378 > t389 GOTO label73
+	GOTO label74
+  LABEL label73:
+	t391 = #0
+	ARG t391
+	CALL write
+	t393 = #0
+	RETURN t393
+	GOTO label76
+  LABEL label74:
+	t396 = &a
+	t399 = #4
+	t400 = #9
+	t401 = i * t400
+	t403 = t401 + j
+	t398 = t399 * t403
+	t404 = t396 + t398
+	t394 = *t404
+	t405 = #0
+	IF t394 == t405 GOTO label77
+	GOTO label78
+  LABEL label77:
+	t407 = #1
+	solve = t407
+  LABEL label78:
+  LABEL label76:
+	t411 = #1
+	t408 = j + t411
+	j = t408
+	GOTO label70
+  LABEL label72:
+	t415 = #1
+	t412 = i + t415
+	i = t412
+	GOTO label67
+  LABEL label69:
+	t417 = #0
+	IF solve != t417 GOTO label79
+	GOTO label80
+  LABEL label79:
+	t419 = CALL solve_sudoku
+	t420 = #0
+	IF t419 != t420 GOTO label81
+	GOTO label82
+  LABEL label81:
+	t422 = #0
+	i = t422
+  LABEL label83:
+	t425 = #9
+	IF i < t425 GOTO label84
+	GOTO label85
+  LABEL label84:
+	t427 = #0
+	j = t427
+  LABEL label86:
+	t430 = #9
+	IF j < t430 GOTO label87
+	GOTO label88
+  LABEL label87:
+	t432 = &a
+	t435 = #4
+	t436 = #9
+	t437 = i * t436
+	t439 = t437 + j
+	t434 = t435 * t439
+	t440 = t432 + t434
+	t431 = *t440
+	ARG t431
+	CALL write
+	t444 = #1
+	t441 = j + t444
+	j = t441
+	GOTO label86
+  LABEL label88:
+	t448 = #1
+	t445 = i + t448
+	i = t445
+	GOTO label83
+  LABEL label85:
+	GOTO label89
+  LABEL label82:
+	t450 = #0
+	ARG t450
+	CALL write
+  LABEL label89:
+	GOTO label90
+  LABEL label80:
+	t454 = &a
+	ARG t454
+	t455 = CALL check_sudoku
+	t456 = #0
+	IF t455 != t456 GOTO label91
+	GOTO label92
+  LABEL label91:
+	t458 = #1
+	ARG t458
+	CALL write
+	GOTO label93
+  LABEL label92:
+	t460 = #0
+	ARG t460
+	CALL write
+  LABEL label93:
+  LABEL label90:
+	t462 = #0
+	RETURN t462

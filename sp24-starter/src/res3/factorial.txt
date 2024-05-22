@@ -1,0 +1,24 @@
+FUNCTION factorial:
+	PARAM n
+	t2 = #0
+	IF n == t2 GOTO label0
+	GOTO label1
+  LABEL label0:
+	t4 = #1
+	RETURN t4
+  LABEL label1:
+	t11 = #1
+	t8 = n - t11
+	ARG t8
+	t12 = CALL factorial
+	t5 = n * t12
+	RETURN t5
+FUNCTION main:
+	n = CALL read
+	ARG n
+	t16 = CALL factorial
+	result = t16
+	ARG result
+	CALL write
+	t19 = #0
+	RETURN t19

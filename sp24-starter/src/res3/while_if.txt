@@ -1,0 +1,56 @@
+FUNCTION get_one:
+	PARAM a
+	t1 = #1
+	RETURN t1
+FUNCTION deepWhileBr:
+	PARAM a
+	PARAM b
+	t2 = a + b
+	c = t2
+  LABEL label0:
+	t7 = #75
+	IF c < t7 GOTO label1
+	GOTO label2
+  LABEL label1:
+	t9 = #42
+	d1 = t9
+	t12 = #100
+	IF c < t12 GOTO label3
+	GOTO label4
+  LABEL label3:
+	t13 = c + d1
+	c = t13
+	t18 = #99
+	IF c > t18 GOTO label5
+	GOTO label6
+  LABEL label5:
+	t22 = #2
+	t19 = d1 * t22
+	e1 = t19
+	t26 = #0
+	ARG t26
+	t27 = CALL get_one
+	t28 = #1
+	IF t27 == t28 GOTO label7
+	GOTO label8
+  LABEL label7:
+	t32 = #2
+	t29 = e1 * t32
+	c = t29
+  LABEL label8:
+  LABEL label6:
+  LABEL label4:
+	GOTO label0
+  LABEL label2:
+	RETURN c
+FUNCTION main:
+	t35 = #2
+	p = t35
+	ARG p
+	ARG p
+	t39 = CALL deepWhileBr
+	p = t39
+	ARG p
+	CALL write
+	t42 = #0
+	RETURN t42

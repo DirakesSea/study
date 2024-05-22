@@ -1,0 +1,17 @@
+FUNCTION main:
+	DEC a #40
+	t1 = #2
+	t3 = #4
+	t2 = t3 * t1
+	t5 = #4
+	t6 = a + t2
+	*t6 = t5
+	t9 = #2
+	t11 = #4
+	t10 = t11 * t9
+	t12 = a + t10
+	t7 = *t12
+	ARG t7
+	CALL write
+	t14 = #0
+	RETURN t14

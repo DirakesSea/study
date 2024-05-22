@@ -1,0 +1,57 @@
+FUNCTION factorial:
+	PARAM m
+	t1 = #1
+	f_res = t1
+  LABEL label0:
+	t4 = #1
+	IF m > t4 GOTO label1
+	GOTO label2
+  LABEL label1:
+	t5 = f_res * m
+	f_res = t5
+	t11 = #1
+	t8 = m - t11
+	m = t8
+	GOTO label0
+  LABEL label2:
+	RETURN f_res
+
+FUNCTION cal_combiniation:
+	PARAM c_base
+	PARAM c_num
+	ARG c_base
+	t16 = CALL factorial
+	ARG c_num
+	t20 = CALL factorial
+	t22 = c_base - c_num
+	ARG t22
+	t25 = CALL factorial
+	t17 = t20 * t25
+	t13 = t16 / t17
+	RETURN t13
+	
+FUNCTION cal_permutation:
+	PARAM p_base
+	PARAM p_num
+	ARG p_base
+	t29 = CALL factorial
+	t31 = p_base - p_num
+	ARG t31
+	t34 = CALL factorial
+	t26 = t29 / t34
+	RETURN t26
+FUNCTION main:
+	n = CALL read
+	k = CALL read
+	ARG n
+	ARG k
+	t40 = CALL cal_combiniation
+	ARG t40
+	CALL write
+	ARG n
+	ARG k
+	t44 = CALL cal_permutation
+	ARG t44
+	CALL write
+	t46 = #0
+	RETURN t46

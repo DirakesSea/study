@@ -1,0 +1,29 @@
+FUNCTION if_ifElse_:
+	t1 = #5
+	a = t1
+	t3 = #10
+	b = t3
+	t6 = #5
+	IF a == t6 GOTO label0
+	GOTO label1
+  LABEL label0:
+	t9 = #10
+	IF b == t9 GOTO label2
+	GOTO label3
+  LABEL label2:
+	t11 = #25
+	a = t11
+	GOTO label4
+  LABEL label3:
+	t15 = #15
+	t12 = a + t15
+	a = t12
+  LABEL label4:
+  LABEL label1:
+	RETURN a
+FUNCTION main:
+	t18 = CALL if_ifElse_
+	ARG t18
+	CALL write
+	t20 = #0
+	RETURN t20

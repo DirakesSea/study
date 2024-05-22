@@ -1,0 +1,22 @@
+FUNCTION f:
+	t1 = #1
+	a = t1
+	t3 = #2
+	b = t3
+	t5 = #3
+	b1 = t5
+	t6 = a + b1
+	a = t6
+	t10 = #4
+	b1 = t10
+	t11 = a + b1
+	a = t11
+	t14 = a + b
+	a = t14
+	RETURN a
+FUNCTION main:
+	t19 = CALL f
+	ARG t19
+	CALL write
+	t21 = #0
+	RETURN t21

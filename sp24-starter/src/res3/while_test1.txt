@@ -1,0 +1,35 @@
+FUNCTION doubleWhile:
+	t1 = #5
+	i = t1
+	t3 = #7
+	j = t3
+  LABEL label0:
+	t6 = #100
+	IF i < t6 GOTO label1
+	GOTO label2
+  LABEL label1:
+	t10 = #30
+	t7 = i + t10
+	i = t7
+  LABEL label3:
+	t13 = #100
+	IF j < t13 GOTO label4
+	GOTO label5
+  LABEL label4:
+	t17 = #6
+	t14 = j + t17
+	j = t14
+	GOTO label3
+  LABEL label5:
+	t21 = #100
+	t18 = j - t21
+	j = t18
+	GOTO label0
+  LABEL label2:
+	RETURN j
+FUNCTION main:
+	t24 = CALL doubleWhile
+	ARG t24
+	CALL write
+	t26 = #0
+	RETURN t26

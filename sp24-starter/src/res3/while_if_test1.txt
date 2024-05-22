@@ -1,0 +1,43 @@
+FUNCTION whileIf:
+	t1 = #0
+	a = t1
+	t3 = #0
+	b = t3
+  LABEL label0:
+	t6 = #100
+	IF a < t6 GOTO label1
+	GOTO label2
+  LABEL label1:
+	t9 = #5
+	IF a == t9 GOTO label3
+	GOTO label4
+  LABEL label3:
+	t11 = #25
+	b = t11
+	GOTO label5
+  LABEL label4:
+	t14 = #10
+	IF a == t14 GOTO label6
+	GOTO label7
+  LABEL label6:
+	t16 = #42
+	b = t16
+	GOTO label8
+  LABEL label7:
+	t20 = #2
+	t17 = a * t20
+	b = t17
+  LABEL label8:
+  LABEL label5:
+	t24 = #1
+	t21 = a + t24
+	a = t21
+	GOTO label0
+  LABEL label2:
+	RETURN b
+FUNCTION main:
+	t27 = CALL whileIf
+	ARG t27
+	CALL write
+	t29 = #0
+	RETURN t29

@@ -1,0 +1,244 @@
+FUNCTION main:
+	DEC mat #64
+	t1 = #0
+	i = t1
+  LABEL label0:
+	t4 = #4
+	IF i < t4 GOTO label1
+	GOTO label2
+  LABEL label1:
+	t6 = #0
+	j = t6
+  LABEL label3:
+	t9 = #4
+	IF j < t9 GOTO label4
+	GOTO label5
+  LABEL label4:
+	t12 = #4
+	t14 = #4
+	t15 = i * t14
+	t16 = t15 + j
+	t11 = t12 * t16
+	t18 = #999
+	t19 = mat + t11
+	*t19 = t18
+	t23 = #1
+	t20 = j + t23
+	j = t20
+	GOTO label3
+  LABEL label5:
+	t27 = #1
+	t24 = i + t27
+	i = t24
+	GOTO label0
+  LABEL label2:
+	t29 = #0
+	i = t29
+  LABEL label6:
+	t32 = #4
+	IF i < t32 GOTO label7
+	GOTO label8
+  LABEL label7:
+	t35 = #4
+	t37 = #4
+	t38 = i * t37
+	t39 = t38 + i
+	t34 = t35 * t39
+	t41 = #0
+	t42 = mat + t34
+	*t42 = t41
+	t46 = #1
+	t43 = i + t46
+	i = t43
+	GOTO label6
+  LABEL label8:
+	t48 = #0
+	t50 = #4
+	t52 = #4
+	t53 = t48 * t52
+	t54 = #1
+	t55 = t53 + t54
+	t49 = t50 * t55
+	t57 = #3
+	t58 = mat + t49
+	*t58 = t57
+	t60 = #0
+	t62 = #4
+	t64 = #4
+	t65 = t60 * t64
+	t66 = #3
+	t67 = t65 + t66
+	t61 = t62 * t67
+	t69 = #5
+	t70 = mat + t61
+	*t70 = t69
+	t72 = #1
+	t74 = #4
+	t76 = #4
+	t77 = t72 * t76
+	t78 = #0
+	t79 = t77 + t78
+	t73 = t74 * t79
+	t81 = #2
+	t82 = mat + t73
+	*t82 = t81
+	t84 = #1
+	t86 = #4
+	t88 = #4
+	t89 = t84 * t88
+	t90 = #3
+	t91 = t89 + t90
+	t85 = t86 * t91
+	t93 = #4
+	t94 = mat + t85
+	*t94 = t93
+	t96 = #2
+	t98 = #4
+	t100 = #4
+	t101 = t96 * t100
+	t102 = #1
+	t103 = t101 + t102
+	t97 = t98 * t103
+	t105 = #1
+	t106 = mat + t97
+	*t106 = t105
+	t108 = #3
+	t110 = #4
+	t112 = #4
+	t113 = t108 * t112
+	t114 = #2
+	t115 = t113 + t114
+	t109 = t110 * t115
+	t117 = #2
+	t118 = mat + t109
+	*t118 = t117
+	t120 = #0
+	k = t120
+  LABEL label9:
+	t123 = #4
+	IF k < t123 GOTO label10
+	GOTO label11
+  LABEL label10:
+	t125 = #0
+	i = t125
+  LABEL label12:
+	t128 = #4
+	IF i < t128 GOTO label13
+	GOTO label14
+  LABEL label13:
+	t130 = #0
+	j = t130
+  LABEL label15:
+	t133 = #4
+	IF j < t133 GOTO label16
+	GOTO label17
+  LABEL label16:
+	t139 = #4
+	t140 = #4
+	t141 = i * t140
+	t143 = t141 + k
+	t138 = t139 * t143
+	t144 = mat + t138
+	t136 = *t144
+	t148 = #4
+	t149 = #4
+	t150 = k * t149
+	t152 = t150 + j
+	t147 = t148 * t152
+	t153 = mat + t147
+	t145 = *t153
+	t134 = t136 + t145
+	t156 = #4
+	t157 = #4
+	t158 = i * t157
+	t160 = t158 + j
+	t155 = t156 * t160
+	t161 = mat + t155
+	t135 = *t161
+	IF t134 < t135 GOTO label18
+	GOTO label19
+  LABEL label18:
+	t164 = #4
+	t166 = #4
+	t167 = i * t166
+	t168 = t167 + j
+	t163 = t164 * t168
+	t173 = #4
+	t174 = #4
+	t175 = i * t174
+	t177 = t175 + k
+	t172 = t173 * t177
+	t178 = mat + t172
+	t170 = *t178
+	t182 = #4
+	t183 = #4
+	t184 = k * t183
+	t186 = t184 + j
+	t181 = t182 * t186
+	t187 = mat + t181
+	t179 = *t187
+	t169 = t170 + t179
+	t188 = mat + t163
+	*t188 = t169
+  LABEL label19:
+	t192 = #1
+	t189 = j + t192
+	j = t189
+	GOTO label15
+  LABEL label17:
+	t196 = #1
+	t193 = i + t196
+	i = t193
+	GOTO label12
+  LABEL label14:
+	t200 = #1
+	t197 = k + t200
+	k = t197
+	GOTO label9
+  LABEL label11:
+	t203 = #0
+	t205 = #4
+	t206 = #4
+	t207 = t203 * t206
+	t209 = #3
+	t210 = t207 + t209
+	t204 = t205 * t210
+	t211 = mat + t204
+	t201 = *t211
+	ARG t201
+	CALL write
+	t214 = #1
+	t216 = #4
+	t217 = #4
+	t218 = t214 * t217
+	t220 = #2
+	t221 = t218 + t220
+	t215 = t216 * t221
+	t222 = mat + t215
+	t212 = *t222
+	ARG t212
+	CALL write
+	t225 = #2
+	t227 = #4
+	t228 = #4
+	t229 = t225 * t228
+	t231 = #1
+	t232 = t229 + t231
+	t226 = t227 * t232
+	t233 = mat + t226
+	t223 = *t233
+	ARG t223
+	CALL write
+	t236 = #3
+	t238 = #4
+	t239 = #4
+	t240 = t236 * t239
+	t242 = #0
+	t243 = t240 + t242
+	t237 = t238 * t243
+	t244 = mat + t237
+	t234 = *t244
+	ARG t234
+	CALL write
+	t246 = #0
+	RETURN t246

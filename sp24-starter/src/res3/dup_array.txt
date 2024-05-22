@@ -1,0 +1,48 @@
+FUNCTION f:
+	t1 = #1
+	a = t1
+	DEC b #16
+	t2 = b + #0
+	t3 = #1
+	*t2 = t3
+	t4 = b + #4
+	t5 = #2
+	*t4 = t5
+	t6 = b + #8
+	t7 = #3
+	*t6 = t7
+	t8 = b + #12
+	t9 = #4
+	*t8 = t9
+	t11 = #3
+	b1 = t11
+	t12 = a + b1
+	a = t12
+	DEC b2 #8
+	t15 = b2 + #0
+	t16 = #4
+	*t15 = t16
+	t17 = b2 + #4
+	t18 = #8
+	*t17 = t18
+	t23 = #0
+	t25 = #4
+	t24 = t25 * t23
+	t26 = b2 + t24
+	t21 = *t26
+	t19 = a + t21
+	a = t19
+	t31 = #1
+	t33 = #4
+	t32 = t33 * t31
+	t34 = b + t32
+	t29 = *t34
+	t27 = a + t29
+	a = t27
+	RETURN a
+FUNCTION main:
+	t37 = CALL f
+	ARG t37
+	CALL write
+	t39 = #0
+	RETURN t39

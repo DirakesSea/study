@@ -1,0 +1,45 @@
+FUNCTION ifWhile:
+	t1 = #0
+	a = t1
+	t3 = #3
+	b = t3
+	t6 = #5
+	IF a == t6 GOTO label0
+	GOTO label1
+  LABEL label0:
+  LABEL label2:
+	t9 = #2
+	IF b == t9 GOTO label3
+	GOTO label4
+  LABEL label3:
+	t13 = #2
+	t10 = b + t13
+	b = t10
+	GOTO label2
+  LABEL label4:
+	t17 = #25
+	t14 = b + t17
+	b = t14
+	GOTO label5
+  LABEL label1:
+  LABEL label6:
+	t20 = #5
+	IF a < t20 GOTO label7
+	GOTO label8
+  LABEL label7:
+	t24 = #2
+	t21 = b * t24
+	b = t21
+	t28 = #1
+	t25 = a + t28
+	a = t25
+	GOTO label6
+  LABEL label8:
+  LABEL label5:
+	RETURN b
+FUNCTION main:
+	t31 = CALL ifWhile
+	ARG t31
+	CALL write
+	t33 = #0
+	RETURN t33

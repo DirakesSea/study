@@ -1,0 +1,17 @@
+FUNCTION main:
+	t1 = #10
+	a = t1
+	t3 = #4
+	b = t3
+	t5 = #2
+	c = t5
+	t7 = #2
+	d = t7
+	t11 = a * b
+	t9 = c + t11
+	t8 = t9 - d
+	result = t8
+	ARG result
+	CALL write
+	t17 = #0
+	RETURN t17

@@ -1,0 +1,152 @@
+FUNCTION Swap:
+	PARAM a
+	PARAM l
+	PARAM h
+	t3 = #4
+	t2 = t3 * l
+	t4 = a + t2
+	t0 = *t4
+	temp = t0
+	t7 = #4
+	t6 = t7 * l
+	t11 = #4
+	t10 = t11 * h
+	t12 = a + t10
+	t8 = *t12
+	t13 = a + t6
+	*t13 = t8
+	t16 = #4
+	t15 = t16 * h
+	t18 = a + t15
+	*t18 = temp
+	t20 = #0
+	RETURN t20
+FUNCTION Partition:
+	PARAM b
+	PARAM low
+	PARAM high
+	t24 = #4
+	t23 = t24 * low
+	t25 = b + t23
+	t21 = *t25
+	base = t21
+  LABEL label0:
+	IF low < high GOTO label1
+	GOTO label2
+  LABEL label1:
+  LABEL label3:
+	IF low < high GOTO label6
+	GOTO label5
+  LABEL label6:
+	t34 = #4
+	t33 = t34 * high
+	t35 = b + t33
+	t30 = *t35
+	IF t30 >= base GOTO label4
+	GOTO label5
+  LABEL label4:
+	t39 = #1
+	t36 = high - t39
+	high = t36
+	GOTO label3
+  LABEL label5:
+	ARG b
+	ARG low
+	ARG high
+	t43 = CALL Swap
+  LABEL label7:
+	IF low < high GOTO label10
+	GOTO label9
+  LABEL label10:
+	t50 = #4
+	t49 = t50 * low
+	t51 = b + t49
+	t46 = *t51
+	IF t46 <= base GOTO label8
+	GOTO label9
+  LABEL label8:
+	t55 = #1
+	t52 = low + t55
+	low = t52
+	GOTO label7
+  LABEL label9:
+	ARG b
+	ARG low
+	ARG high
+	t59 = CALL Swap
+	GOTO label0
+  LABEL label2:
+	RETURN low
+FUNCTION QuickSort:
+	PARAM c
+	PARAM low1
+	PARAM high1
+	IF low1 < high1 GOTO label11
+	GOTO label12
+  LABEL label11:
+	ARG c
+	ARG low1
+	ARG high1
+	t67 = CALL Partition
+	base11a = t67
+	ARG c
+	ARG low1
+	t73 = #1
+	t70 = base11a - t73
+	ARG t70
+	t74 = CALL QuickSort
+	ARG c
+	t79 = #1
+	t76 = base11a + t79
+	ARG t76
+	ARG high1
+	t81 = CALL QuickSort
+  LABEL label12:
+	t83 = #0
+	RETURN t83
+FUNCTION main:
+	t85 = #8
+	n = t85
+	DEC arr #32
+	t87 = #0
+	i = t87
+  LABEL label13:
+	IF i < n GOTO label14
+	GOTO label15
+  LABEL label14:
+	t92 = #4
+	t91 = t92 * i
+	t94 = arr + t91
+	t122 = CALL read
+	*t94 = t122
+	t98 = #1
+	t95 = i + t98
+	i = t95
+	GOTO label13
+  LABEL label15:
+	ARG arr
+	t101 = #0
+	ARG t101
+	t105 = #1
+	t102 = n - t105
+	ARG t102
+	t106 = CALL QuickSort
+	t108 = #0
+	i = t108
+  LABEL label16:
+	IF i < n GOTO label17
+	GOTO label18
+  LABEL label17:
+	t114 = #4
+	t113 = t114 * i
+	t115 = arr + t113
+	t111 = *t115
+	ARG t111
+	CALL write
+	t119 = #1
+	t116 = i + t119
+	i = t116
+	GOTO label16
+  LABEL label18:
+	t121 = #0
+	RETURN t121

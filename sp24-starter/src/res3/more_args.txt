@@ -1,0 +1,77 @@
+FUNCTION foo:
+	PARAM a1
+	PARAM a2
+	PARAM a3
+	PARAM a4
+	PARAM a5
+	PARAM a6
+	PARAM a7
+	PARAM a8
+	PARAM a9
+	PARAM a10
+	t0 = a10 + a8
+	RETURN t0
+FUNCTION fun:
+	PARAM a1
+	PARAM a2
+	PARAM a3
+	PARAM a4
+	PARAM a5
+	PARAM a6
+	PARAM a7
+	PARAM a8
+	PARAM a9
+	PARAM a10
+	t5 = #10
+	ARG t5
+	t7 = #20
+	ARG t7
+	t9 = #30
+	ARG t9
+	t11 = #40
+	ARG t11
+	t13 = #50
+	ARG t13
+	t15 = #60
+	ARG t15
+	t17 = #70
+	ARG t17
+	t19 = #80
+	ARG t19
+	t21 = #90
+	ARG t21
+	t23 = #100
+	ARG t23
+	t24 = CALL foo
+	res = t24
+	t25 = a10 + a8
+	ARG t25
+	CALL write
+	RETURN res
+FUNCTION main:
+	t31 = #1
+	ARG t31
+	t33 = #2
+	ARG t33
+	t35 = #3
+	ARG t35
+	t37 = #4
+	ARG t37
+	t39 = #5
+	ARG t39
+	t41 = #6
+	ARG t41
+	t43 = #7
+	ARG t43
+	t45 = #8
+	ARG t45
+	t47 = #9
+	ARG t47
+	t49 = #10
+	ARG t49
+	t50 = CALL fun
+	b = t50
+	ARG b
+	CALL write
+	t53 = #0
+	RETURN t53

@@ -1,0 +1,24 @@
+FUNCTION main:
+	t1 = #10
+	a = t1
+	t3 = #0
+	IF a != t3 GOTO label0
+	GOTO label1
+  LABEL label0:
+	t5 = #0
+	t7 = #0
+	t9 = #0
+	t11 = #1
+	t8 = t9 - t11
+	t6 = t7 - t8
+	t4 = t5 - t6
+	a = t4
+	GOTO label2
+  LABEL label1:
+	t13 = #0
+	a = t13
+  LABEL label2:
+	ARG a
+	CALL write
+	t16 = #0
+	RETURN t16

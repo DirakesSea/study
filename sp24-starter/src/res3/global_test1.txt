@@ -1,0 +1,97 @@
+GLOBAL a:
+	.WORD #0
+GLOBAL b:
+	.WORD #0
+	.WORD #0
+GLOBAL c:
+	.WORD #1
+	.WORD #1
+	.WORD #4
+	.WORD #5
+	.WORD #0
+	.WORD #0
+	.WORD #1
+	.WORD #0
+	.WORD #0
+	.WORD #4
+	.WORD #0
+	.WORD #0
+GLOBAL i:
+	.WORD #2024
+FUNCTION main:
+  LABEL label0:
+	t3 = &a
+	t2 = *t3
+	t4 = #2
+	IF t2 < t4 GOTO label1
+	GOTO label2
+  LABEL label1:
+	t7 = &a
+	t6 = *t7
+	t9 = #4
+	t8 = t9 * t6
+	t13 = &a
+	t12 = *t13
+	t15 = #2
+	t10 = t12 * t15
+	t17 = &b
+	t16 = t17 + t8
+	*t16 = t10
+	t21 = &a
+	t20 = *t21
+	t23 = #1
+	t18 = t20 + t23
+	t24 = &a
+	*t24 = t18
+	GOTO label0
+  LABEL label2:
+	t29 = &a
+	t28 = *t29
+	t31 = &b
+	t33 = #0
+	t35 = #4
+	t34 = t35 * t33
+	t36 = t31 + t34
+	t30 = *t36
+	t26 = t28 + t30
+	t38 = &b
+	t40 = #1
+	t42 = #4
+	t41 = t42 * t40
+	t43 = t38 + t41
+	t37 = *t43
+	t25 = t26 + t37
+	ARG t25
+	CALL write
+	t46 = &i
+	t45 = *t46
+	ARG t45
+	CALL write
+	t48 = #0
+	i1 = t48
+  LABEL label3:
+	t51 = #12
+	IF i1 < t51 GOTO label4
+	GOTO label5
+  LABEL label4:
+	t53 = &c
+	t57 = #3
+	t54 = i1 / t57
+	t59 = #4
+	t60 = #3
+	t61 = t54 * t60
+	t65 = #3
+	t62 = i1 % t65
+	t66 = t61 + t62
+	t58 = t59 * t66
+	t67 = t53 + t58
+	t52 = *t67
+	ARG t52
+	CALL write
+	t71 = #1
+	t68 = i1 + t71
+	i1 = t68
+	GOTO label3
+  LABEL label5:
+	t73 = #0
+	RETURN t73

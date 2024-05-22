@@ -1,0 +1,8 @@
+FUNCTION main:
+	a = CALL read
+	b = CALL read
+	t2 = a + b
+	ARG t2
+	CALL write
+	t6 = #0
+	RETURN t6

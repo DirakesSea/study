@@ -1,0 +1,25 @@
+FUNCTION main:
+	t1 = #10
+	n = t1
+	t3 = #0
+	i = t3
+	t5 = #1
+	k = t5
+  LABEL label0:
+	t10 = #1
+	t7 = n - t10
+	IF i <= t7 GOTO label1
+	GOTO label2
+  LABEL label1:
+	t14 = #1
+	t11 = i + t14
+	i = t11
+	t17 = #1
+	t18 = k + k
+	k = t18
+	GOTO label0
+  LABEL label2:
+	ARG k
+	CALL write
+	t23 = #0
+	RETURN t23

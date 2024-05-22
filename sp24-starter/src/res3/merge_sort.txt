@@ -1,0 +1,299 @@
+FUNCTION main:
+	t1 = #5
+	n = t1
+	DEC arr #20
+	DEC tmp #20
+	t3 = #0
+	i = t3
+  LABEL label0:
+	IF i < n GOTO label1
+	GOTO label2
+  LABEL label1:
+	t8 = #4
+	t7 = t8 * i
+	t10 = arr + t7
+	t269 = CALL read
+	*t10 = t269
+	t14 = #1
+	t11 = i + t14
+	i = t11
+	GOTO label0
+  LABEL label2:
+	t16 = #1
+	intv = t16
+  LABEL label3:
+	IF intv < n GOTO label4
+	GOTO label5
+  LABEL label4:
+	t20 = #0
+	i = t20
+  LABEL label6:
+	t26 = #2
+	t24 = t26 * intv
+	t22 = n - t24
+	IF i <= t22 GOTO label7
+	GOTO label8
+  LABEL label7:
+	s1 = i
+	t29 = s1 + intv
+	e1 = t29
+	cur1 = s1
+	s2 = e1
+	t34 = s2 + intv
+	e2 = t34
+	cur2 = s2
+  LABEL label9:
+	IF cur1 < e1 GOTO label12
+	GOTO label11
+  LABEL label12:
+	IF cur2 < e2 GOTO label10
+	GOTO label11
+  LABEL label10:
+	t46 = #4
+	t45 = t46 * cur1
+	t47 = arr + t45
+	t42 = *t47
+	t50 = #4
+	t49 = t50 * cur2
+	t51 = arr + t49
+	t43 = *t51
+	IF t42 < t43 GOTO label13
+	GOTO label14
+  LABEL label13:
+	t54 = #4
+	t53 = t54 * i
+	t58 = #4
+	t57 = t58 * cur1
+	t59 = arr + t57
+	t55 = *t59
+	t60 = tmp + t53
+	*t60 = t55
+	t64 = #1
+	t61 = cur1 + t64
+	cur1 = t61
+	GOTO label15
+  LABEL label14:
+	t67 = #4
+	t66 = t67 * i
+	t71 = #4
+	t70 = t71 * cur2
+	t72 = arr + t70
+	t68 = *t72
+	t73 = tmp + t66
+	*t73 = t68
+	t77 = #1
+	t74 = cur2 + t77
+	cur2 = t74
+  LABEL label15:
+	t81 = #1
+	t78 = i + t81
+	i = t78
+	GOTO label9
+  LABEL label11:
+  LABEL label16:
+	IF cur1 < e1 GOTO label17
+	GOTO label18
+  LABEL label17:
+	t86 = #4
+	t85 = t86 * i
+	t90 = #4
+	t89 = t90 * cur1
+	t91 = arr + t89
+	t87 = *t91
+	t92 = tmp + t85
+	*t92 = t87
+	t96 = #1
+	t93 = cur1 + t96
+	cur1 = t93
+	t100 = #1
+	t97 = i + t100
+	i = t97
+	GOTO label16
+  LABEL label18:
+  LABEL label19:
+	IF cur2 < e2 GOTO label20
+	GOTO label21
+  LABEL label20:
+	t105 = #4
+	t104 = t105 * i
+	t109 = #4
+	t108 = t109 * cur2
+	t110 = arr + t108
+	t106 = *t110
+	t111 = tmp + t104
+	*t111 = t106
+	t115 = #1
+	t112 = cur2 + t115
+	cur2 = t112
+	t119 = #1
+	t116 = i + t119
+	i = t116
+	GOTO label19
+  LABEL label21:
+	GOTO label6
+  LABEL label8:
+	t120 = i + intv
+	IF t120 < n GOTO label22
+	GOTO label23
+  LABEL label22:
+	s1 = i
+	t125 = s1 + intv
+	e1 = t125
+	cur1 = s1
+	s2 = e1
+	e2 = n
+	cur2 = s2
+  LABEL label24:
+	IF cur1 < e1 GOTO label27
+	GOTO label26
+  LABEL label27:
+	IF cur2 < e2 GOTO label25
+	GOTO label26
+  LABEL label25:
+	t140 = #4
+	t139 = t140 * cur1
+	t141 = arr + t139
+	t136 = *t141
+	t144 = #4
+	t143 = t144 * cur2
+	t145 = arr + t143
+	t137 = *t145
+	IF t136 < t137 GOTO label28
+	GOTO label29
+  LABEL label28:
+	t148 = #4
+	t147 = t148 * i
+	t152 = #4
+	t151 = t152 * cur1
+	t153 = arr + t151
+	t149 = *t153
+	t154 = tmp + t147
+	*t154 = t149
+	t158 = #1
+	t155 = cur1 + t158
+	cur1 = t155
+	t162 = #1
+	t159 = i + t162
+	i = t159
+	GOTO label30
+  LABEL label29:
+	t165 = #4
+	t164 = t165 * i
+	t169 = #4
+	t168 = t169 * cur2
+	t170 = arr + t168
+	t166 = *t170
+	t171 = tmp + t164
+	*t171 = t166
+	t175 = #1
+	t172 = cur2 + t175
+	cur2 = t172
+	t179 = #1
+	t176 = i + t179
+	i = t176
+  LABEL label30:
+	GOTO label24
+  LABEL label26:
+  LABEL label31:
+	IF cur1 < e1 GOTO label32
+	GOTO label33
+  LABEL label32:
+	t184 = #4
+	t183 = t184 * i
+	t188 = #4
+	t187 = t188 * cur1
+	t189 = arr + t187
+	t185 = *t189
+	t190 = tmp + t183
+	*t190 = t185
+	t194 = #1
+	t191 = cur1 + t194
+	cur1 = t191
+	t198 = #1
+	t195 = i + t198
+	i = t195
+	GOTO label31
+  LABEL label33:
+  LABEL label34:
+	IF cur2 < e2 GOTO label35
+	GOTO label36
+  LABEL label35:
+	t203 = #4
+	t202 = t203 * i
+	t207 = #4
+	t206 = t207 * cur2
+	t208 = arr + t206
+	t204 = *t208
+	t209 = tmp + t202
+	*t209 = t204
+	t213 = #1
+	t210 = cur2 + t213
+	cur2 = t210
+	t217 = #1
+	t214 = i + t217
+	i = t214
+	GOTO label34
+  LABEL label36:
+	GOTO label37
+  LABEL label23:
+  LABEL label38:
+	IF i < n GOTO label39
+	GOTO label40
+  LABEL label39:
+	t222 = #4
+	t221 = t222 * i
+	t226 = #4
+	t225 = t226 * i
+	t227 = arr + t225
+	t223 = *t227
+	t228 = tmp + t221
+	*t228 = t223
+	t232 = #1
+	t229 = i + t232
+	i = t229
+	GOTO label38
+  LABEL label40:
+  LABEL label37:
+	t234 = #0
+	i = t234
+  LABEL label41:
+	IF i < n GOTO label42
+	GOTO label43
+  LABEL label42:
+	t239 = #4
+	t238 = t239 * i
+	t243 = #4
+	t242 = t243 * i
+	t244 = tmp + t242
+	t240 = *t244
+	t245 = arr + t238
+	*t245 = t240
+	t249 = #1
+	t246 = i + t249
+	i = t246
+	GOTO label41
+  LABEL label43:
+	t253 = #2
+	t250 = intv * t253
+	intv = t250
+	GOTO label3
+  LABEL label5:
+	t255 = #0
+	i = t255
+  LABEL label44:
+	IF i < n GOTO label45
+	GOTO label46
+  LABEL label45:
+	t261 = #4
+	t260 = t261 * i
+	t262 = arr + t260
+	t258 = *t262
+	ARG t258
+	CALL write
+	t266 = #1
+	t263 = i + t266
+	i = t263
+	GOTO label44
+  LABEL label46:
+	t268 = #0
+	RETURN t268

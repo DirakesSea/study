@@ -1,0 +1,40 @@
+FUNCTION main:
+	t1 = #0
+	flag = t1
+	t3 = #1
+	a = t3
+	t5 = #0
+	b = t5
+	t7 = #1
+	c = t7
+	t9 = #2
+	d = t9
+	t11 = #4
+	e = t11
+	t14 = a * b
+	t12 = t14 / c
+	t13 = e + d
+	IF t12 == t13 GOTO label3
+	GOTO label2
+  LABEL label3:
+	t24 = a + b
+	t22 = a * t24
+	t20 = t22 + c
+	t21 = d + e
+	IF t20 <= t21 GOTO label0
+	GOTO label2
+  LABEL label2:
+	t33 = b * c
+	t30 = a - t33
+	t37 = a / c
+	t31 = d - t37
+	IF t30 == t31 GOTO label0
+	GOTO label1
+  LABEL label0:
+	t41 = #1
+	flag = t41
+  LABEL label1:
+	ARG flag
+	CALL write
+	t44 = #0
+	RETURN t44

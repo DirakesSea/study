@@ -1,0 +1,9 @@
+FUNCTION f:
+	t1 = #10
+	RETURN t1
+FUNCTION main:
+	t3 = CALL f
+	ARG t3
+	CALL write
+	t5 = #0
+	RETURN t5

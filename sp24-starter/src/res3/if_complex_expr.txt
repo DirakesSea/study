@@ -1,0 +1,65 @@
+FUNCTION main:
+	t1 = #5
+	a = t1
+	t3 = #5
+	b = t3
+	t5 = #1
+	c = t5
+	t7 = #0
+	t9 = #2
+	t6 = t7 - t9
+	d = t6
+	t11 = #2
+	result = t11
+	t17 = #1
+	t14 = d * t17
+	t19 = #2
+	t12 = t14 / t19
+	t20 = #0
+	IF t12 < t20 GOTO label0
+	GOTO label2
+  LABEL label2:
+	t21 = a - b
+	t25 = #0
+	IF t21 != t25 GOTO label3
+	GOTO label1
+  LABEL label3:
+	t31 = #3
+	t28 = c + t31
+	t33 = #2
+	t26 = t28 % t33
+	t34 = #0
+	IF t26 != t34 GOTO label0
+	GOTO label1
+  LABEL label0:
+	ARG result
+	CALL write
+  LABEL label1:
+	t41 = #2
+	t38 = d % t41
+	t43 = #67
+	t36 = t38 + t43
+	t44 = #0
+	IF t36 < t44 GOTO label4
+	GOTO label6
+  LABEL label6:
+	t45 = a - b
+	t49 = #0
+	IF t45 != t49 GOTO label7
+	GOTO label5
+  LABEL label7:
+	t55 = #2
+	t52 = c + t55
+	t57 = #2
+	t50 = t52 % t57
+	t58 = #0
+	IF t50 != t58 GOTO label4
+	GOTO label5
+  LABEL label4:
+	t60 = #4
+	result = t60
+	ARG result
+	CALL write
+  LABEL label5:
+	t63 = #0
+	RETURN t63
